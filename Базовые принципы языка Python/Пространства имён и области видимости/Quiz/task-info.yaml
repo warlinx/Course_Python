@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: В момент объявления функции
+- text: В момент создания объекта функции
+- text: В момент начала выполнения тела функции
+- text: В момент вызова функции
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1

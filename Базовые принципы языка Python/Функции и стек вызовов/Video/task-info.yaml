@@ -1,0 +1,30 @@
+type: video
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+thumbnail: https://ucarecdn.com/6507094a-5309-4965-b526-046da068a388/
+sources:
+- src: https://ucarecdn.com/808955e9-735a-4b85-8547-f4ed7f4a77ce/9081_1080_47db3b5c21835a08347afe3f840e9d9d.mp4
+  res: 1080
+  type: video/mp4
+  label: 1080p
+- src: https://ucarecdn.com/8ad98777-d4c9-40f2-9253-222b0704da9e/9081_720_f3c76e9a9073c73e934b57db89ba4103.mp4
+  res: 720
+  type: video/mp4
+  label: 720p
+- src: https://ucarecdn.com/49b766ce-1692-4aef-b287-0bd57c030f5a/9081_540_0db582210da003cad33d7c765c5a02e7.mp4
+  res: 540
+  type: video/mp4
+  label: 540p
+- src: https://ucarecdn.com/eb5ce94d-6f8f-4af3-b53b-4cc88a93025a/9081_360_0a4205a96cea6a9b1b461fe8a3676fa4.mp4
+  res: 360
+  type: video/mp4
+  label: 360p
+currentTime: 0
+status: Solved
+record: -1
+post_submission_on_open: true

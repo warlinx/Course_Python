@@ -1,0 +1,30 @@
+<html>
+ <head></head>
+ <body>
+  <p>Вам дано описание пирамиды из кубиков в формате XML.<br>Кубики могут быть трех цветов: красный (<b>red</b>), зеленый (<b>green</b>) и синий (<b>blue</b>﻿).<br>Для каждого кубика известны его цвет, и известны кубики, расположенные прямо под ним.<br></p>
+  <p><b>Пример:<br></b></p>
+  <pre><pre><code class="language-xml">&lt;cube color="blue"&gt;
+&nbsp; &lt;cube color="red"&gt;
+&nbsp; &nbsp; &lt;cube color="green"&gt;
+&nbsp; &nbsp; &lt;/cube&gt;
+&nbsp; &lt;/cube&gt;
+&nbsp; &lt;cube color="red"&gt;
+&nbsp; &lt;/cube&gt;
+&lt;/cube&gt;</code></pre> </pre>Введем понятие ценности для кубиков. Самый верхний кубик, соответствующий корню XML документа имеет ценность 
+  <b>1</b>. Кубики, расположенные прямо под ним, имеют ценность 
+  <b>2</b>. Кубики, расположенные прямо под нижележащими кубиками, имеют ценность 
+  <b>3.</b> И т. д.
+  <div>
+   <br>
+  </div>
+  <div>
+   Ценность цвета равна сумме ценностей всех кубиков этого цвета.
+  </div>
+  <div>
+   <br>
+  </div>
+  <div>
+   Выведите через пробел три числа: ценности красного, зеленого и синего цветов.
+  </div>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">&lt;cube color=&quot;blue&quot;&gt;&lt;cube color=&quot;red&quot;&gt;&lt;cube color=&quot;green&quot;&gt;&lt;/cube&gt;&lt;/cube&gt;&lt;cube color=&quot;red&quot;&gt;&lt;/cube&gt;&lt;/cube&gt;</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">4 3 1</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 5 seconds</font><br><br>

@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: s(11, b=20)
+- text: s(b=31)
+- text: s(5, 5, 5, 5, 1)
+- text: s(21)
+- text: s(11, 10, b=10)
+- text: s(0, 0, 31)
+- text: s(b=31, 0)
+- text: s(11, 10, 10)
+- text: s(11, 10)
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Solved
+record: -1
+custom_name: Quiz

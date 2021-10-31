@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: После завершения блока try, если в нем было брошено исключение, которое не
+    было поймано ни в одном блоке except
+- text: После завершения блока try, если в нем не было брошено исключение
+- text: После завершения обработки пойманного исключения
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1

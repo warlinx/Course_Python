@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="video-cell">
+    <video id="video" class="video-js vjs-default-skin vjs-big-play-centered vjs-nofull" data-setup='{"fluid": true}'>
+      <p class="vjs-no-js">
+        View this video on <a href=https://stepik.org/lesson/24468/step/4>Stepik</a>.
+      </p>
+    </video>
+  </div>
+</div>
+<script>
+  videojs('video', {
+            controls: true,
+            playbackRates: [0.75, 1, 1.25, 1.5, 1.75, 2],
+            sources: [{"src":"https://ucarecdn.com/986445ef-31c8-4abc-8281-d7e31758218f/8213_1080_2c3f2c31447a7a1b393497e2863832a0.mp4","res":"1080","type":"video/mp4","label":"1080p"},{"src":"https://ucarecdn.com/04ebcae8-85e1-41a6-8aed-2a2f4e32c951/8213_720_1d9a57e174f3626e2e16bd9f643c97fc.mp4","res":"720","type":"video/mp4","label":"720p"},{"src":"https://ucarecdn.com/8f0789f2-6fcc-4b5b-9b4d-e0e6795936f7/8213_540_a882ac377a96c73a6195339aca8f5aca.mp4","res":"540","type":"video/mp4","label":"540p"},{"src":"https://ucarecdn.com/93b684a3-0749-46f6-81f9-ff5a79c9eacb/8213_360_0ab6fb1accfff035069faece9f261e3b.mp4","res":"360","type":"video/mp4","label":"360p"}],
+            controlBar: {
+              volumePanel: {inline: false}
+            },
+            plugins: {
+              videoJsResolutionSwitcher: {
+                dynamicLabel: false
+              }
+            },
+          }
+      , function () {
+        var player = this;
+        window.player = player;
+        var currentTime = 0
+            player.on('loadeddata', function () {
+              player.currentTime(currentTime);
+            })
+      }
+  )
+</script>

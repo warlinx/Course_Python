@@ -1,0 +1,25 @@
+<html>
+ <head></head>
+ <body>
+  <h2 style="text-align: center;">Установка утилиты pip</h2> 
+  <p>Утилита pip позволит нам устанавливать пакеты из репозитория Python Package Index:&nbsp;<a href="https://pypi.python.org/pypi" rel="nofollow noopener noreferrer">https://pypi.python.org/pypi</a></p> 
+  <p>Если вы&nbsp;устанавливали&nbsp;python <strong>версии 3.4&nbsp;или&nbsp;выше</strong>,&nbsp;то&nbsp;у&nbsp;вас&nbsp;уже&nbsp;должен&nbsp;быть&nbsp;установлен&nbsp;pip.</p> 
+  <p>Чтобы&nbsp;это&nbsp;проверить,&nbsp;вы&nbsp;можете&nbsp;запустить</p> 
+  <pre><code class="language-bash">$ pip --version
+# или
+$ pip3 --version</code></pre> 
+  <p>такая команда выведет текущую версию утилиты pip, а также папку, в которую будут устанавливаться пакеты. Убедитесь что в пути до данной папки, указана верная версия вашего интерпретатора.</p> 
+  <p>Если же не установлена (или путь до папки содержит другую версию интерпретатора), то вы можете перейти на сайт <a href="https://pip.pypa.io/en/latest/installing/" rel="nofollow noopener noreferrer">https://pip.pypa.io/en/latest/installing/</a>&nbsp;и найти там инструкции по установке утилиты pip: а именно скачать с сайта файл get-pip.py, и запустить его с помощью своего интерпретатора python. Если у вас на операционной системе несколько интерпретаторов, то убедитесь, что вы запустили файл get-pip.py, используя правильный (интерпретатор языка python3 может называться, как python, так и python3, в зависимости от вашей операционной системы).</p> 
+  <p>Чтобы&nbsp;убедиться&nbsp;в&nbsp;том,&nbsp;что&nbsp;вы&nbsp;установили&nbsp;pip,&nbsp;попробуйте&nbsp;запустить&nbsp;инструкцию&nbsp;выше.</p> 
+  <p>Для того, чтобы установить какую-нибудь библиотеку из Python Package Index (например пакет simple-crypt из следующей задачи), необходимо запустить команду</p> 
+  <pre><code class="language-bash">$ pip install simple-crypt</code></pre> 
+  <p>&nbsp;</p> 
+  <p>Если&nbsp;операционная&nbsp;система linux&nbsp;скажет,&nbsp;что&nbsp;вам&nbsp;не&nbsp;хватает&nbsp;прав&nbsp;для&nbsp;данной&nbsp;операции,&nbsp;используйте&nbsp;команду</p> 
+  <p>&nbsp;</p> 
+  <pre><code class="language-bash">$ sudo pip install simple-crypt</code></pre> 
+  <p>&nbsp;</p> 
+  <p>Утилита pip очень понадобится нам в третьем модуле для установки различных библиотек, поэтому если у вас возникла проблема с установкой данной утилиты, пожалуйста, напишите это в комментариях .</p> 
+  <p><strong>Примечание</strong>:</p> 
+  <p>Самым&nbsp;успешным&nbsp;способом&nbsp;на&nbsp;данный&nbsp;момент&nbsp;установки&nbsp;данного&nbsp;пакета&nbsp;на&nbsp;windows, судя&nbsp;по комментариям, является&nbsp;установка дистрибутива&nbsp;<a href="https://www.anaconda.com/products/individual" rel="nofollow noopener noreferrer">Anaconda</a>&nbsp;и дальнейшая установка&nbsp;пакетов&nbsp;с&nbsp;его&nbsp;помощью. Anaconda&nbsp;является&nbsp;хорошим&nbsp;дистрибутивом&nbsp;и&nbsp;вполне&nbsp;подойдет&nbsp;нам&nbsp;далее&nbsp;для&nbsp;прохождения&nbsp;курса.</p>
+ </body>
+</html>

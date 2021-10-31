@@ -1,0 +1,18 @@
+type: code
+custom_name: Programming
+files:
+- name: task.py
+  visible: true
+  text: |-
+    class Buffer:
+        def __init__(self):
+            # конструктор без аргументов
+
+        def add(self, *a):
+            # добавить следующую часть последовательности
+
+        def get_current_part(self):
+            # вернуть сохраненные в текущий момент элементы последовательности в порядке, в котором они были добавлены
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: a = [i + 1 for i in range(4)]
+- text: a = [i for i in range(4)]
+- text: a = [i for i in range(5)][1:]
+- text: a = list(i + 1 for i in range(4))
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Unchecked
+record: -1

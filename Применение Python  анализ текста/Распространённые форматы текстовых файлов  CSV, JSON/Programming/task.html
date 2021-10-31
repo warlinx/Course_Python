@@ -1,0 +1,21 @@
+<html>
+ <head></head>
+ <body>
+  <p>Вам дано описание наследования классов в формате JSON. <br>Описание представляет из себя массив JSON-объектов, которые соответствуют классам. У каждого JSON-объекта есть поле <b>name</b>, которое содержит имя класса, и поле <b>parents,</b> которое содержит список имен прямых предков.<br></p>
+  <p><b>Пример:<br></b><b></b>[{"name": "A", "parents": []}, {"name": "B", "parents": ["A", "C"]}, {"name": "C", "parents": ["A"]}]<br></p>
+  <p><b>﻿Эквивалент на Python:<br></b></p>
+  <pre><code class="language-python">class A:
+    pass
+
+class B(A, C):
+    pass
+
+class C(A):
+    pass</code></pre>
+  <br>
+  <p>Гарантируется, что никакой класс не наследуется от себя явно или косвенно, и что никакой класс не наследуется явно от одного класса более одного раза.</p>
+  <p>Для каждого класса вычислите предком скольких классов он является и выведите эту информацию в следующем формате.</p>
+  <p><b>&lt;имя класса&gt; : &lt;количество потомков&gt;</b><br></p>
+  <p><b></b>Выводить классы следует в лексикографическом порядке.<br></p>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">[{&quot;name&quot;: &quot;A&quot;, &quot;parents&quot;: []}, {&quot;name&quot;: &quot;B&quot;, &quot;parents&quot;: [&quot;A&quot;, &quot;C&quot;]}, {&quot;name&quot;: &quot;C&quot;, &quot;parents&quot;: [&quot;A&quot;]}]</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">A : 3<br>B : 1<br>C : 2<br></code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 2 seconds</font><br><br>

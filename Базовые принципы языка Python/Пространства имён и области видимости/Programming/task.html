@@ -1,0 +1,59 @@
+<html>
+ <head></head>
+ <body>
+  <p>Реализуйте программу, которая будет эмулировать работу с пространствами имен. Необходимо реализовать поддержку создания пространств имен и добавление в них переменных.</p>
+  <p>В данной задаче у каждого пространства имен есть уникальный текстовый идентификатор – его имя.</p>
+  <p>Вашей программе на вход подаются следующие запросы:</p>
+  <ul>
+   <li><b>create &lt;namespace&gt; &lt;parent&gt; </b>– &nbsp;создать новое пространство имен с именем <b>&lt;namespace&gt; </b>внутри пространства <b>&lt;parent&gt;</b></li>
+   <li><b>add &lt;namespace&gt; &lt;var&gt; </b>– добавить в пространство <b>&lt;namespace&gt; </b>переменную <b>&lt;var&gt;</b></li>
+   <li><b>get &lt;namespace&gt; &lt;var&gt; </b>– получить имя пространства, из которого будет взята переменная <b>&lt;var&gt; </b>при запросе из пространства <b>&lt;namespace&gt;</b>, или <b>None</b><b></b>, если такого пространства не существует</li>
+  </ul>
+  <p>Рассмотрим набор запросов</p>
+  <ul>
+   <li><b>add global a</b><br></li>
+   <li><b>create foo global</b><br></li>
+   <li><b>add foo b</b><br></li>
+   <li><b>create bar foo</b><br></li>
+   <li><b>add bar a</b><br></li>
+  </ul>
+  <p>Структура пространств имен описанная данными запросами будет эквивалентна структуре пространств имен, созданной при выполнении данного кода<b><br></b></p>
+  <pre><pre><code class="language-python">a = 0
+def foo():
+&nbsp; b = 1
+&nbsp; def bar():
+&nbsp; &nbsp; a = 2</code></pre></pre>
+  <p>В основном теле программы<b> </b>мы объявляем переменную <b>a</b>, тем самым добавляя ее в пространство <b>global</b>. Далее мы объявляем функцию <b>foo</b>, что влечет за собой создание локального для нее пространства имен внутри пространства <b>global</b>. В нашем случае, это описывается командой <b>create foo global</b>. Далее мы объявляем внутри функции <b>foo</b> функцию <b>bar</b>, тем самым создавая пространство <b>bar</b> внутри пространства <b>foo</b>, и добавляем в <b>bar</b> переменную <b>a</b>.</p>
+  <p>Добавим запросы <b>get </b>к нашим запросам</p>
+  <ul>
+   <li><b>get foo a</b></li>
+   <li><b>get foo c</b></li>
+   <li><b>get bar a</b></li>
+   <li><b>get bar b</b></li>
+  </ul>
+  <p><b></b>Представим как это могло бы выглядеть в коде<b><br></b></p>
+  <pre><code class="language-python">a = 0
+def foo():
+&nbsp; b = 1
+&nbsp; get(a)
+&nbsp; get(c)
+&nbsp; def bar():
+&nbsp; &nbsp; a = 2
+&nbsp; &nbsp; get(a)
+&nbsp; &nbsp; get(b)</code></pre> 
+  <p>Результатом запроса <b>get</b> будет имя пространства, из которого будет взята нужная переменная.<br>Например, результатом запроса <b>get foo a </b>будет <b>global</b>, потому что в пространстве <b>foo </b>не<b> </b>объявлена переменная <b>a</b>, но в пространстве <b>global</b>, внутри которого находится пространство <b>foo</b>, она объявлена. Аналогично, результатом запроса <b>get bar b</b> будет являться <b>foo</b>, а результатом работы <b>get bar a</b> будет являться <b>bar</b>.</p>
+  <p>Результатом <b>get foo c</b> будет являться <b>None</b>, потому что ни в пространстве <b>foo</b>, ни в его внешнем пространстве <b>global </b>не была объявлена переменная <b>с</b>.</p>
+  <p>Более формально, результатом работы <b>get &lt;namespace&gt; &lt;var&gt; </b>является</p>
+  <ul>
+   <li><b>&lt;namespace&gt;</b>, если в пространстве <b>&lt;namespace&gt;</b> была объявлена переменная <b>&lt;var&gt;</b><br></li>
+   <li><b>get &lt;parent&gt; &lt;var&gt;</b> – результат запроса к пространству, внутри которого было создано пространство <b>&lt;namespace&gt;</b>, если переменная не была объявлена<br></li>
+   <li><b>None</b>, если не существует <b>&lt;parent&gt;</b>, т. е. <b>&lt;namespace&gt;</b>﻿&nbsp;– это <b>global</b><br></li>
+  </ul>
+  <h2 style="text-align: center;">Формат входных данных</h2>
+  <p>В первой строке дано число <b>n</b> (<b>1 ≤ n ≤ 100</b>) – число запросов.<br>В каждой из следующих <b>n</b> строк дано по одному запросу.<br>Запросы выполняются в порядке, в котором они даны во входных данных.<br>Имена пространства имен и имена переменных представляют из себя строки длины не более <b>10</b>, состоящие из строчных латинских букв.</p>
+  <h2 style="text-align: center;">Формат выходных данных</h2>
+  <p>Для каждого запроса <b>get</b> выведите в отдельной строке его результат.</p>
+  <p><br></p>
+  <b></b>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">9<br>add global a<br>create foo global<br>add foo b<br>get foo a<br>get foo c<br>create bar foo<br>add bar a<br>get bar a<br>get bar b<br></code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">global<br>None<br>bar<br>foo<br></code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 5 seconds</font><br><br>

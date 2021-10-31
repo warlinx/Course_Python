@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Идентификатор объекта – это целое число
+- text: Идентификатор объекта – это ссылка на объект
+- text: Идентификатор объекта – это строка
+- text: Идентификаторы двух объектов равны, если равны данные внутри объектов, и различаются
+    если различаются данные
+- text: Идентификаторы всех объектов уникальны
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: task.py
+  visible: true
+  text: |+
+    #  You can experiment here, it won’t be checked
+
+  learner_created: false
+status: Solved
+record: -1
